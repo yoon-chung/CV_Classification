@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - team_solve
+  - override /solve_backbone: convnext_384
+  - _self_
+
+experiment:
+  description: "Team solve alias: top1 + convnext_384 backbone"

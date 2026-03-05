@@ -1,0 +1,11 @@
+# @package _global_
+defaults:
+  - /explore: default
+  - _self_
+
+experiment:
+  kind: explore
+
+preflight:
+  mode: warn
+  ruleset: local_fast

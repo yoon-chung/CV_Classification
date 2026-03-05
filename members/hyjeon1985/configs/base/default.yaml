@@ -1,0 +1,156 @@
+# @package _global_
+defaults:
+  - _self_
+
+runner:
+  run_id: ${oc.env:RUN_ID,${now:%H-%M-%S}}
+  resume: false
+  dummy_data: false
+
+pipeline:
+  step: full
+  stop_after: upload
+  cache:
+    enabled: false
+    root: ${oc.env:CACHE_DIR,${oc.env:ROOT_DIR}/cache}
+    namespace: ${oc.env:CVDC_CACHE_NAMESPACE,cvdc}
+    salt:
+      manual: '${oc.env:CVDC_CACHE_VERSION,"v1"}'
+      code: ${oc.env:CVDC_CODE_SALT,null}
+      data: ${oc.env:CVDC_DATA_SALT,null}
+
+train:
+  seed: 42
+  epochs: 10
+  batch_size: 16
+  grad_accum_steps: 1
+  amp: true
+  label_smoothing: 0.0
+  class_weight_mode: none
+  early_stop:
+    enabled: false
+    monitor: val/macro_f1
+    mode: max
+    patience: 3
+    min_delta: 0.001
+    warmup_epochs: 2
+
+model:
+  backbone: tf_efficientnetv2_s
+  pretrained: true
+  num_classes: 17
+
+optimizer:
+  name: adamw
+  lr: 1e-4
+  weight_decay: 1e-2
+
+scheduler:
+  name: none
+  warmup_epochs: 0
+  min_lr: 1e-6
+  step_size: 3
+  gamma: 0.1
+  max_lr: 1e-3
+
+preprocess:
+  target_size: 384
+  padding_pos: center
+
+infer:
+  tta:
+    enabled: false
+    views: [none]
+    cache_enabled: false
+    cache_subdir: infer_tta
+
+augmentation:
+  preset: baseline
+  mix: none
+  color_jitter: true
+  random_crop: true
+
+split:
+  strategy: stratified_kfold
+  n_splits: 5
+  fold_index: 0
+  holdout_ratio: 0.2
+  seed: 42
+  group_key: group_key
+
+dataset:
+  data_root: ${oc.env:DATA_DIR,data}
+  train_csv: ${dataset.data_root}/train.csv
+  test_csv: ${dataset.data_root}/test.csv
+  image_dir_train: ${dataset.data_root}/train
+  image_dir_test: ${dataset.data_root}/test
+  image_extensions: [".jpg", ".png", ".jpeg"]
+
+logging:
+  save_dir: ${oc.env:RUNS_DIR,${oc.env:ROOT_DIR}/outputs}
+
+metrics:
+  enabled: true
+  uncertainty:
+    low_margin_threshold: 0.05
+    high_conf_threshold: 0.90
+  export:
+    eval_predictions: true
+    class_metrics: true
+    infer_predictions_with_confidence: true
+    infer_probabilities: true
+
+wandb:
+  mode: ${oc.env:WANDB_MODE,disabled}
+  dir: ${logging.save_dir}
+  log_interval: epoch
+  log_every_n_steps: 50
+  metrics: ["train/loss", "val/loss", "val/macro_f1"]
+  summary_keys: ["best/val_macro_f1", "best/epoch"]
+
+preflight:
+  mode: warn
+  ruleset: confirm
+
+submission:
+  eval_contracts: []
+
+upload:
+
+plugins:
+  augment:
+    mode: preset
+    preset_key: ${augmentation.preset}
+    _target_: ""
+  loss:
+    mode: builtin
+    name: cross_entropy
+    _target_: ""
+  sampler:
+    enabled: false
+    name: ""
+    _target_: ""
+  ensemble:
+    enabled: false
+    name: weighted_mean
+    _target_: ""
+
+hydra:
+  mode: RUN
+  job:
+    chdir: false
+    config:
+      override_dirname:
+        kv_sep: "-"
+        item_sep: "__"
+        exclude_keys:
+          - hydra.mode
+          - runner.resume
+          - runner.dummy_data
+  run:
+    dir: ${logging.save_dir}/${runner.profile}/date=${now:%Y-%m-%d}/run_id=${runner.run_id}
+  sweep:
+    dir: ${logging.save_dir}/${runner.profile}/date=${now:%Y-%m-%d}/sweep_id=${now:%H-%M-%S}
+    subdir: run_id=${hydra.job.num}_${hydra.job.override_dirname}
+  sweeper:
+    params: {}

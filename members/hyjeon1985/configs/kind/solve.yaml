@@ -1,0 +1,11 @@
+# @package _global_
+defaults:
+  - /solve: default
+  - _self_
+
+experiment:
+  kind: solve
+
+preflight:
+  mode: strict
+  ruleset: solve

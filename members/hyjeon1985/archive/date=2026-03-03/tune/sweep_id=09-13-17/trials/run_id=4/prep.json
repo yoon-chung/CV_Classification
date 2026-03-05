@@ -1,0 +1,17 @@
+{
+  "node": "prep",
+  "status": "completed",
+  "dummy_data": false,
+  "split": {
+    "strategy": "stratified_kfold",
+    "n_splits": 5,
+    "fold_index": 0,
+    "seed": 42
+  },
+  "n_train": 1256,
+  "n_val": 314,
+  "n_test": 3140,
+  "train_split_csv": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=4/artifacts/prep/train_split.csv",
+  "val_split_csv": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=4/artifacts/prep/val_split.csv",
+  "test_ids_csv": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=4/artifacts/prep/test_ids.csv"
+}

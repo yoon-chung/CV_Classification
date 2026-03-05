@@ -1,0 +1,11 @@
+# @package _global_
+defaults:
+  - default
+  - _self_
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      augmentation.preset: choice(aug_lite,aug_balanced,aug_strong)
+      augmentation.mix: choice(none,mixup,cutmix)

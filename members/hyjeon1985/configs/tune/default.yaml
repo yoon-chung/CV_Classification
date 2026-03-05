@@ -1,0 +1,29 @@
+# @package _global_
+train:
+  epochs: 12
+  batch_size: 24
+  class_weight_mode: balanced
+
+optimizer:
+  lr: 2e-4
+
+augmentation:
+  preset: baseline
+  mix: mixup
+
+sweep:
+  risk_note: "Hydra multirun is lazy-composed. Do not edit code/config during active sweep."
+
+tune:
+  selection:
+    topk: 3
+  selector:
+    std_weight: 0.2
+    overfit_gap_threshold: 0.03
+    overfit_weight: 1.0
+    fail_weight: 0.5
+  lineage:
+    enabled: true
+
+hydra:
+  mode: RUN

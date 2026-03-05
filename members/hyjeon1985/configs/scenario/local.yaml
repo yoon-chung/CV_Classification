@@ -1,0 +1,26 @@
+# @package _global_
+experiment:
+  scenario: local
+
+upload:
+  s3:
+    enabled: false
+
+preflight:
+  mode: strict
+  ruleset: local_fast
+
+pipeline:
+  cache:
+    enabled: false
+    root: ${oc.env:CACHE_DIR,${oc.env:ROOT_DIR}/cache}
+    namespace: ${oc.env:CVDC_CACHE_NAMESPACE,cvdc}
+    salt:
+      manual: ${oc.env:CVDC_CACHE_VERSION,"v1"}
+      code: ${oc.env:CVDC_CODE_SALT,null}
+      data: ${oc.env:CVDC_DATA_SALT,null}
+
+wandb:
+  mode: disabled
+  artifacts:
+    enabled: false

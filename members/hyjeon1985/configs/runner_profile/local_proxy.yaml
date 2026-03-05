@@ -1,0 +1,10 @@
+# @package _global_
+runner:
+  profile: local_proxy
+  queue:
+    strategy: fifo
+  max_concurrency: ${oc.decode:${oc.env:MAX_CONCURRENCY,1}}
+train:
+  num_workers: ${oc.decode:${oc.env:NUM_WORKERS,4}}
+artifacts:
+  level: minimal

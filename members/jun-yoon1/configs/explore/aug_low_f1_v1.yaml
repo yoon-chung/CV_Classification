@@ -1,0 +1,16 @@
+base:
+  - configs/base/data.yaml
+  - configs/base/model.yaml
+  - configs/base/train.yaml
+
+experiment:
+  name: explore_aug_low_f1_v1
+  direction: low_f1_class_strong_aug
+
+override:
+  augmentation:
+    policy: v1
+    rotate_limit: 12
+    perspective_scale: 0.08
+    blur_prob: 0.2
+    jpeg_prob: 0.2

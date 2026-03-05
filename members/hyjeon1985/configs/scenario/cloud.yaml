@@ -1,0 +1,34 @@
+# @package _global_
+experiment:
+  scenario: cloud
+
+# S3 upload disabled for overnight runs (W&B metadata + Slack only)
+upload:
+  s3:
+    enabled: false
+    bucket: ${oc.env:S3_BUCKET,null}
+    prefix: ${oc.env:S3_PREFIX,""}
+
+# W&B enabled for cloud scenario (metadata only, no artifacts)
+wandb:
+  mode: online
+  project: ${oc.env:WANDB_PROJECT,cv-doc-class}
+  entity: ${oc.env:WANDB_ENTITY,null}
+  group: ${oc.env:WANDB_GROUP,overnight}
+  artifacts:
+    enabled: false
+
+# Preflight rules for cloud (confirm mode for safety)
+preflight:
+  ruleset: confirm
+
+# Cache disabled for cloud scenario
+pipeline:
+  cache:
+    enabled: false
+    root: ${oc.env:CACHE_DIR,${oc.env:ROOT_DIR}/cache}
+    namespace: ${oc.env:CVDC_CACHE_NAMESPACE,cvdc}
+    salt:
+      manual: ${oc.env:CVDC_CACHE_VERSION,"v1"}
+      code: ${oc.env:CVDC_CODE_SALT,null}
+      data: ${oc.env:CVDC_DATA_SALT,null}

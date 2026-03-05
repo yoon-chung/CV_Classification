@@ -1,0 +1,21 @@
+{
+  "method": "soft_vote_weighted",
+  "description": "top1 multiseed (0.8) + top2 multiseed (0.2)",
+  "weights": {
+    "top1_seed42": 0.26666666666666666,
+    "top1_seed52": 0.26666666666666666,
+    "top1_seed62": 0.26666666666666666,
+    "top2_seed42": 0.06666666666666667,
+    "top2_seed52": 0.06666666666666667,
+    "top2_seed62": 0.06666666666666667
+  },
+  "sources": {
+    "top1_seed42": "members/hyjeon1985/archive/date=2026-03-03/solve/solve-team-final/run_id=solve-team-final-multiseed-20260303-125822/runs/run_id=solve-team-fulltrain-multiseed-20260303-125822-seed42-1-top1-convnext_384/artifacts/infer/predictions_proba.npz",
+    "top1_seed52": "members/hyjeon1985/archive/date=2026-03-03/solve/solve-team-final/run_id=solve-team-final-multiseed-20260303-125822/runs/run_id=solve-team-fulltrain-multiseed-20260303-125822-seed52-1-top1-convnext_384/artifacts/infer/predictions_proba.npz",
+    "top1_seed62": "members/hyjeon1985/archive/date=2026-03-03/solve/solve-team-final/run_id=solve-team-final-multiseed-20260303-125822/runs/run_id=solve-team-fulltrain-multiseed-20260303-125822-seed62-1-top1-convnext_384/artifacts/infer/predictions_proba.npz",
+    "top2_seed42": "members/hyjeon1985/archive/date=2026-03-03/solve/solve-team-final/run_id=solve-team-final-multiseed-top2-20260303-134341/runs/run_id=solve-team-fulltrain-multiseed-top2-20260303-134341-seed42-1-top2-convnext_384/artifacts/infer/predictions_proba.npz",
+    "top2_seed52": "members/hyjeon1985/archive/date=2026-03-03/solve/solve-team-final/run_id=solve-team-final-multiseed-top2-20260303-134341/runs/run_id=solve-team-fulltrain-multiseed-top2-20260303-134341-seed52-1-top2-convnext_384/artifacts/infer/predictions_proba.npz",
+    "top2_seed62": "members/hyjeon1985/archive/date=2026-03-03/solve/solve-team-final/run_id=solve-team-final-multiseed-top2-20260303-134341/runs/run_id=solve-team-fulltrain-multiseed-top2-20260303-134341-seed62-1-top2-convnext_384/artifacts/infer/predictions_proba.npz"
+  },
+  "output_csv": "members/hyjeon1985/archive/date=2026-03-03/solve/solve-team-final/run_id=solve-team-final-crossblend-20260303-230000/submission_top1ms0p8_top2ms0p2.csv"
+}

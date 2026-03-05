@@ -1,0 +1,18 @@
+# @package _global_
+defaults:
+  - _self_
+
+pipeline:
+  step: full
+  stop_after: infer
+
+upload:
+  s3:
+    enabled: false
+
+wandb:
+  artifacts:
+    enabled: false
+
+solve:
+  final_overrides: []

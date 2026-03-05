@@ -1,0 +1,95 @@
+# @package _global_
+defaults:
+  - default
+  - _self_
+
+experiment:
+  description: "Team valid: Narrow quick_screen -> strict validation -> full_train"
+
+explore:
+  strategy: overnight
+  job_timeout_sec: 3600
+  max_jobs: 12
+  run_dummy: false
+  upload:
+    each_stage: true
+  constraints:
+    allow_mix_with_label_smoothing: false
+  selection:
+    topk: 2
+  stages:
+    - name: quick_screen
+      stop_after: eval
+      train_batch_size: 16
+      train_epochs: 3
+      fold_indices: [0]
+      cache:
+        enabled: false
+        key_fields: []
+        artifacts: [checkpoint]
+    - name: validation
+      stop_after: eval
+      train_batch_size: 16
+      train_epochs: 6
+      fold_indices: [0, 1, 2]
+      queue_mode: tree_parent_first
+      pruning:
+        enabled: true
+        metric_key: macro_f1
+        min_value: 0.85
+        best_margin: 0.03
+        warmup_parents: 1
+        max_fold_std: 0.03
+        max_overfit_gap: 0.08
+        max_val_loss: 0.45
+      cache:
+        enabled: false
+        key_fields: []
+        artifacts: [checkpoint]
+    - name: full_train
+      stop_after: infer
+      train_batch_size: 16
+      train_epochs: 8
+      fold_indices: [0, 1, 2, 3, 4]
+      cache:
+        enabled: false
+        key_fields: []
+        artifacts: [checkpoint]
+
+  matrix:
+    model.backbone:
+      - convnext_small.fb_in22k_ft_in1k
+    preprocess.target_size:
+      - 384
+    optimizer.lr:
+      - 1e-4
+      - 2e-4
+    augmentation.preset:
+      - explore_v1
+    augmentation.mix:
+      - none
+      - mixup
+    train.label_smoothing:
+      - 0.0
+      - 0.1
+    train.seed:
+      - 42
+    train.class_weight_mode:
+      - none
+      - balanced
+
+wandb:
+  mode: online
+  entity: ${oc.env:WANDB_ENTITY,null}
+  project: ${oc.env:WANDB_PROJECT,cv-doc-class}
+  group: ${oc.env:WANDB_GROUP,team_valid_${now:%Y%m%d_%H%M%S}}
+
+upload:
+  s3:
+    enabled: false
+
+runner:
+  max_concurrency: ${oc.decode:${oc.env:MAX_CONCURRENCY,2}}
+
+train:
+  num_workers: 8

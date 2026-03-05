@@ -1,0 +1,111 @@
+# @package _global_
+defaults:
+  - default
+  - _self_
+
+experiment:
+  description: "Team expand: Extended exploration beyond validated patterns"
+
+explore:
+  strategy: overnight
+  job_timeout_sec: 3600
+  max_jobs: 0
+  run_dummy: false
+  upload:
+    each_stage: true
+  constraints:
+    allow_mix_with_label_smoothing: false
+  selection:
+    topk: 3
+  stages:
+    - name: quick_screen
+      stop_after: eval
+      train_batch_size: 16
+      train_epochs: 2
+      fold_indices: [0]
+      cache:
+        enabled: false
+        key_fields: []
+        artifacts: [checkpoint]
+    - name: validation
+      stop_after: eval
+      train_batch_size: 16
+      train_epochs: 5
+      fold_indices: [0, 1, 2]
+      queue_mode: tree_parent_first
+      pruning:
+        enabled: true
+        metric_key: macro_f1
+        min_value: 0.85
+        best_margin: 0.03
+        warmup_parents: 1
+        max_fold_std: 0.03
+        max_overfit_gap: 0.08
+        max_val_loss: 0.45
+      cache:
+        enabled: false
+        key_fields: []
+        artifacts: [checkpoint]
+    - name: full_train
+      stop_after: infer
+      train_batch_size: 16
+      train_epochs: 8
+      fold_indices: [0, 1, 2, 3, 4]
+      cache:
+        enabled: false
+        key_fields: []
+        artifacts: [checkpoint]
+  matrix:
+    # Extended backbone exploration (avoiding known failures: B4, Swin, V2-S)
+    model.backbone:
+      - tf_efficientnet_b3
+      - tf_efficientnet_b5
+      - convnext_small.fb_in22k_ft_in1k
+      - convnext_base.fb_in22k_ft_in1k
+      - resnet50
+    preprocess.target_size:
+      - 384
+      - 448
+    optimizer.lr:
+      - 5e-5
+      - 1e-4
+      - 2e-4
+      - 3e-4
+    augmentation.preset:
+      - baseline
+      - aug_v2
+      - aug_v3
+      - quality_shift
+    augmentation.mix:
+      - none
+      - mixup
+      - cutmix
+    train.label_smoothing:
+      - 0.0
+      - 0.05
+      - 0.1
+    train.seed:
+      - 42
+      - 77
+      - 123
+    train.class_weight_mode:
+      - balanced
+      - sqrt
+      - none
+
+# Cloud scenario settings for overnight run
+wandb:
+  mode: online
+  entity: ${oc.env:WANDB_ENTITY,null}
+  project: ${oc.env:WANDB_PROJECT,cv-doc-class}
+  group: ${oc.env:WANDB_GROUP,team_expand_${now:%Y%m%d_%H%M%S}}
+
+upload:
+  s3:
+    enabled: false
+
+runner:
+  max_concurrency: ${oc.decode:${oc.env:MAX_CONCURRENCY,2}}
+
+train:
+  num_workers: 8

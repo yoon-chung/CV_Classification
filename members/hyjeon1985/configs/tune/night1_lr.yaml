@@ -1,0 +1,14 @@
+# @package _global_
+defaults:
+  - default
+  - _self_
+
+train:
+  epochs: 8
+  batch_size: 24
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      optimizer.lr: choice(8e-4,4e-4,2e-4,1e-4)

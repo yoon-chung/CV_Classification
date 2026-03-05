@@ -1,0 +1,8 @@
+defaults:
+  - base/default
+  - scenario: local
+  - runner_profile: local_proxy
+  - kind: explore
+  - _self_
+
+spec_version: 1

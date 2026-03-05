@@ -1,0 +1,12 @@
+base:
+  - configs/base/data.yaml
+  - configs/base/model.yaml
+  - configs/base/train.yaml
+
+experiment:
+  name: tune_ensemble_weight_v1
+  direction: class_weighted_voting
+
+override:
+  ensemble:
+    weights: [0.40, 0.30, 0.30]

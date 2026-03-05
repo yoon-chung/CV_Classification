@@ -1,0 +1,13 @@
+# @package _global_
+model:
+  backbone: convnext_small.fb_in22k_ft_in1k
+
+preprocess:
+  target_size: 384
+
+train:
+  batch_size: 24
+  grad_accum_steps: 1
+
+solve:
+  backbone_profile: base

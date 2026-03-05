@@ -1,0 +1,16 @@
+backbone_a,backbone_b,candidate_hash_a,candidate_hash_b,candidate_name_a,candidate_name_b,disagreement_rate,fold_index_a,fold_index_b,id_signature,n_common,run_a,run_b
+,,,,,,0.24044585987261147,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-3-top2-base,solve-team-fulltrain-20260303-110104-6-top3-convnext_384
+,,,,,,0.23089171974522293,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-3-top2-base,solve-team-fulltrain-20260303-110104-5-top3-base
+,,,,,,0.228343949044586,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-4-top2-convnext_384,solve-team-fulltrain-20260303-110104-6-top3-convnext_384
+,,,,,,0.22611464968152867,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-1-top1-base,solve-team-fulltrain-20260303-110104-6-top3-convnext_384
+,,,,,,0.21273885350318472,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-5-top3-base,solve-team-fulltrain-20260303-110104-6-top3-convnext_384
+,,,,,,0.20923566878980893,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-2-top1-convnext_384,solve-team-fulltrain-20260303-110104-3-top2-base
+,,,,,,0.20636942675159237,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-1-top1-base,solve-team-fulltrain-20260303-110104-5-top3-base
+,,,,,,0.20636942675159237,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-4-top2-convnext_384,solve-team-fulltrain-20260303-110104-5-top3-base
+,,,,,,0.19044585987261148,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-2-top1-convnext_384,solve-team-fulltrain-20260303-110104-6-top3-convnext_384
+,,,,,,0.18980891719745224,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-3-top2-base,solve-team-fulltrain-20260303-110104-4-top2-convnext_384
+,,,,,,0.18025477707006368,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-1-top1-base,solve-team-fulltrain-20260303-110104-2-top1-convnext_384
+,,,,,,0.17611464968152865,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-1-top1-base,solve-team-fulltrain-20260303-110104-4-top2-convnext_384
+,,,,,,0.16751592356687897,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-2-top1-convnext_384,solve-team-fulltrain-20260303-110104-5-top3-base
+,,,,,,0.13885350318471337,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-1-top1-base,solve-team-fulltrain-20260303-110104-3-top2-base
+,,,,,,0.13821656050955414,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-20260303-110104-2-top1-convnext_384,solve-team-fulltrain-20260303-110104-4-top2-convnext_384

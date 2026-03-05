@@ -1,0 +1,17 @@
+# @package _global_
+defaults:
+  - default
+  - _self_
+
+runner:
+  dummy_data: true
+
+train:
+  epochs: 2
+  batch_size: 8
+
+optimizer:
+  lr: 5e-4
+
+hydra:
+  mode: MULTIRUN

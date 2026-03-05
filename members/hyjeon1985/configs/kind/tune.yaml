@@ -1,0 +1,18 @@
+# @package _global_
+defaults:
+  - /tune: default
+  - _self_
+
+experiment:
+  kind: tune
+
+preflight:
+  mode: warn
+  ruleset: confirm
+
+hydra:
+  callbacks:
+    tune:
+      _target_: experiment.tune.callbacks.TuneReportCallback
+      results_csv: tune_results.csv
+      summary_json: tune_summary.json

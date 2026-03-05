@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-03-03T13:42:41",
+  "source": {
+    "sweep_dir": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17",
+    "wandb_root": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/outputs/wandb",
+    "wandb_group": "tune__date=2026-03-03__sweep_id=09-13-17"
+  },
+  "archived": {
+    "archive_root": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/docs/archive/tune_report/date=2026-03-03__sweep_id=09-13-17",
+    "trial_count": 64,
+    "wandb_run_count": 64,
+    "files": {
+      "sweep": [
+        "multirun.yaml",
+        "tune_results.csv",
+        "tune_results.csv.moved_from_bad_path",
+        "tune_summary.json",
+        "tune_summary.json.moved_from_bad_path"
+      ],
+      "derived": [
+        "trial_metrics_flat.csv",
+        "wandb_summary_flat.csv"
+      ]
+    }
+  },
+  "notes": [
+    "Heavy artifacts (checkpoints, model binaries, data copies) are intentionally excluded.",
+    "This archive is intended for tuning report/chart generation.",
+    "Hardware/system metadata files (wandb-metadata.json) are removed."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-03-03T07:26:01Z",
+  "source": {
+    "outputs_base": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03",
+    "run_base": "solve-team-20260303-152256",
+    "run_glob": "run_id=solve-team-20260303-152256-*"
+  },
+  "archived": {
+    "archive_root": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/archive/date=2026-03-03/solve/solve-team/run_id=solve-team-20260303-152256",
+    "run_count": 6,
+    "archived_file_count": 60,
+    "include": [
+      "runs/*/{eval.json,train.json,infer.json,submission.csv,predictions.csv}",
+      "runs/*/artifacts/eval/{class_metrics.csv,val_predictions.csv}",
+      "runs/*/hydra/{overrides.yaml,config.yaml}",
+      "ensemble/{ensemble_val_pairs.csv,ensemble_test_pairs.csv,ensemble_run_scores.csv,ensemble_runs.json,ensemble_summary.json}",
+      "runs_summary.csv"
+    ]
+  },
+  "notes": [
+    "Heavy artifacts (checkpoints/model binaries) are excluded.",
+    "Archive is intended for solve analysis and submission traceability."
+  ]
+}

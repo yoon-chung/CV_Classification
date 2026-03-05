@@ -1,0 +1,64 @@
+# Python / tooling caches
+/.venv/
+**/__pycache__/
+/.pytest_cache/
+/.mypy_cache/
+/.coverage
+/htmlcov/
+
+# Secrets
+**/.env
+**/.env.*
+!**/.env.template
+
+# Root runtime artifacts
+/runs/
+/runs_smoke/
+/runs_test/
+/cache/
+/outputs/
+/logs/
+/wandb/
+/multirun/
+/.hydra/
+/reports/
+/contracts/
+/checkpoints/
+/submissions/
+/exports/
+/meta.json
+/sweep_summary.csv
+/app.log
+/run_metadata.json
+
+# Member runtime artifacts
+members/*/outputs/**
+!members/*/outputs/
+!members/*/outputs/.gitkeep
+members/*/cache/**
+!members/*/cache/
+!members/*/cache/.gitkeep
+
+# Keep archive snapshots trackable even when subfolder name is "runs"
+!members/*/archive/**/runs/
+!members/*/archive/**/runs/**
+
+# Ignore noisy trial internals inside archive snapshots
+members/*/archive/**/trials/**/.hydra/
+members/*/archive/**/trials/**/app.log
+
+# Dataset directories
+/data/**
+!/data/
+!/data/.gitkeep
+members/*/data/**
+!members/*/data/
+!members/*/data/.gitkeep
+
+# Notebook / temporary files
+**/.ipynb_checkpoints/
+members/**/tmp/
+
+# Root requirements policy
+requirements.*.txt
+!requirements.txt

@@ -1,0 +1,16 @@
+backbone_a,backbone_b,candidate_hash_a,candidate_hash_b,candidate_name_a,candidate_name_b,disagreement_rate,fold_index_a,fold_index_b,id_signature,n_common,run_a,run_b
+,,,,,,0.3359872611464968,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-1-top1-base,solve-team-20260303-083630-6-top3-convnext_384
+,,,,,,0.32229299363057323,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-5-top3-base,solve-team-20260303-083630-6-top3-convnext_384
+,,,,,,0.31560509554140126,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-2-top1-convnext_384,solve-team-20260303-083630-6-top3-convnext_384
+,,,,,,0.3060509554140127,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-3-top2-base,solve-team-20260303-083630-6-top3-convnext_384
+,,,,,,0.27420382165605095,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-4-top2-convnext_384,solve-team-20260303-083630-6-top3-convnext_384
+,,,,,,0.2710191082802548,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-4-top2-convnext_384,solve-team-20260303-083630-5-top3-base
+,,,,,,0.2605095541401274,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-1-top1-base,solve-team-20260303-083630-5-top3-base
+,,,,,,0.2554140127388535,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-2-top1-convnext_384,solve-team-20260303-083630-5-top3-base
+,,,,,,0.24936305732484076,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-3-top2-base,solve-team-20260303-083630-5-top3-base
+,,,,,,0.23630573248407644,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-1-top1-base,solve-team-20260303-083630-2-top1-convnext_384
+,,,,,,0.2340764331210191,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-1-top1-base,solve-team-20260303-083630-4-top2-convnext_384
+,,,,,,0.23121019108280255,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-2-top1-convnext_384,solve-team-20260303-083630-3-top2-base
+,,,,,,0.20828025477707007,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-3-top2-base,solve-team-20260303-083630-4-top2-convnext_384
+,,,,,,0.18312101910828024,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-2-top1-convnext_384,solve-team-20260303-083630-4-top2-convnext_384
+,,,,,,0.15764331210191082,,,9b81ac0fe6ba,3140,solve-team-20260303-083630-1-top1-base,solve-team-20260303-083630-3-top2-base

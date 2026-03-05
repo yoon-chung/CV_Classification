@@ -1,0 +1,15 @@
+train_csv: data/train_v1.csv
+train_image_dir: data/train
+test_image_dir: data/test
+meta_csv: data/meta.csv
+sample_submission_csv: data/sample_submission.csv
+
+num_classes: 17
+image_size: 384
+batch_size: 32
+num_workers: 12
+
+cv:
+  type: stratified_kfold
+  n_splits: 5
+  seed: 42

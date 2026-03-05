@@ -1,0 +1,15 @@
+# @package _global_
+train:
+  epochs: 6
+  batch_size: 16
+  class_weight_mode: balanced
+
+optimizer:
+  lr: 3e-4
+
+augmentation:
+  preset: explore_v1
+  mix: none
+
+hydra:
+  mode: RUN

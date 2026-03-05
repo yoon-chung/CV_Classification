@@ -1,0 +1,42 @@
+[
+  {
+    "run_id": "solve-team-20260303-101047-1-top2-base",
+    "run_dir": "/root/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_confirm/date=2026-03-03/run_id=solve-team-20260303-101047-1-top2-base",
+    "candidate_name": "",
+    "candidate_hash": "",
+    "backbone_profile": "",
+    "fold_index": "",
+    "has_val_predictions": true,
+    "has_test_predictions": true
+  },
+  {
+    "run_id": "solve-team-20260303-101047-2-top2-convnext_384",
+    "run_dir": "/root/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_confirm/date=2026-03-03/run_id=solve-team-20260303-101047-2-top2-convnext_384",
+    "candidate_name": "",
+    "candidate_hash": "",
+    "backbone_profile": "",
+    "fold_index": "",
+    "has_val_predictions": true,
+    "has_test_predictions": true
+  },
+  {
+    "run_id": "solve-team-20260303-101047-3-top3-base",
+    "run_dir": "/root/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_confirm/date=2026-03-03/run_id=solve-team-20260303-101047-3-top3-base",
+    "candidate_name": "",
+    "candidate_hash": "",
+    "backbone_profile": "",
+    "fold_index": "",
+    "has_val_predictions": true,
+    "has_test_predictions": true
+  },
+  {
+    "run_id": "solve-team-20260303-101047-4-top3-convnext_384",
+    "run_dir": "/root/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_confirm/date=2026-03-03/run_id=solve-team-20260303-101047-4-top3-convnext_384",
+    "candidate_name": "",
+    "candidate_hash": "",
+    "backbone_profile": "",
+    "fold_index": "",
+    "has_val_predictions": true,
+    "has_test_predictions": true
+  }
+]

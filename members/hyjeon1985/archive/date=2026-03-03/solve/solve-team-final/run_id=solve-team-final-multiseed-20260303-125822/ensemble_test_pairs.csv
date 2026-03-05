@@ -1,0 +1,4 @@
+backbone_a,backbone_b,candidate_hash_a,candidate_hash_b,candidate_name_a,candidate_name_b,disagreement_rate,fold_index_a,fold_index_b,id_signature,n_common,run_a,run_b
+,,,,,,0.2875796178343949,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-multiseed-20260303-125822-seed42-1-top1-convnext_384,solve-team-fulltrain-multiseed-20260303-125822-seed62-1-top1-convnext_384
+,,,,,,0.2627388535031847,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-multiseed-20260303-125822-seed52-1-top1-convnext_384,solve-team-fulltrain-multiseed-20260303-125822-seed62-1-top1-convnext_384
+,,,,,,0.260828025477707,0,0,9b81ac0fe6ba,3140,solve-team-fulltrain-multiseed-20260303-125822-seed42-1-top1-convnext_384,solve-team-fulltrain-multiseed-20260303-125822-seed52-1-top1-convnext_384

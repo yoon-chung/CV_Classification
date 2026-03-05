@@ -1,0 +1,10 @@
+# @package _global_
+runner:
+  profile: hpc_confirm
+  queue:
+    strategy: fifo
+  max_concurrency: ${oc.decode:${oc.env:MAX_CONCURRENCY,1}}
+train:
+  num_workers: ${oc.decode:${oc.env:NUM_WORKERS,8}}
+artifacts:
+  level: full

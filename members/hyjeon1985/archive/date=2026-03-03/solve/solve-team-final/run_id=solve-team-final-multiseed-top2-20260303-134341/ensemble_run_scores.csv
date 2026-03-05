@@ -1,0 +1,4 @@
+run_id,test_disagreement_mean,test_disagreement_mean_n,val_complementarity_mean,val_complementarity_mean_n,val_disagreement_mean,val_disagreement_mean_n,val_error_overlap_jaccard_mean,val_error_overlap_jaccard_mean_n,val_oracle_gain_mean,val_oracle_gain_mean_n
+solve-team-fulltrain-multiseed-top2-20260303-134341-seed42-1-top2-convnext_384,0.26576433121019105,2,0.005498938428874734,2,0.006050955414012739,2,0.06666666666666667,2,0.001273885350318471,2
+solve-team-fulltrain-multiseed-top2-20260303-134341-seed52-1-top2-convnext_384,0.2571656050955414,2,0.005414012738853504,2,0.005414012738853504,2,0.0,2,0.0,2
+solve-team-fulltrain-multiseed-top2-20260303-134341-seed62-1-top2-convnext_384,0.26019108280254777,2,0.007091295116772824,2,0.007643312101910828,2,0.06666666666666667,2,0.001273885350318471,2

@@ -1,0 +1,26 @@
+# @package _global_
+train:
+  seed: 42
+  epochs: 10
+  batch_size: 16
+  grad_accum_steps: 1
+  amp: true
+  num_workers: 4
+
+optimizer:
+  name: adamw
+  lr: 1e-4
+  weight_decay: 1e-2
+
+scheduler:
+  name: cosine
+  warmup_epochs: 1
+
+loss:
+  name: cross_entropy
+  class_weight: null
+
+logging:
+  save_best_by: macro_f1
+  save_confusion_matrix: true
+  save_classwise_f1: true

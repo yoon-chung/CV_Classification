@@ -1,0 +1,30 @@
+# @package _global_
+defaults:
+  - team_solve
+  - override /runner_profile: hpc_confirm
+  - _self_
+
+experiment:
+  description: "Team final solve: generate 3 final submission sets (single/pair_soft/triple_soft)"
+
+wandb:
+  tags:
+    - solve
+    - team_solve
+    - team_solve_final
+    - "sweep:${solve.sweep_id}"
+
+solve:
+  final:
+    matrix:
+      - top1:base
+      - top1:convnext_384
+      - top2:base
+    keys:
+      top1_base: top1_base
+      top1_384: top1_convnext_384
+      top2_base: top2_base
+    submissions:
+      single: submission_1_single_top1_convnext_384.csv
+      pair_soft: submission_2_pair_soft_top1_base_top1_convnext_384.csv
+      triple_soft: submission_3_triple_soft_top1_base_top1_convnext_384_top2_base.csv

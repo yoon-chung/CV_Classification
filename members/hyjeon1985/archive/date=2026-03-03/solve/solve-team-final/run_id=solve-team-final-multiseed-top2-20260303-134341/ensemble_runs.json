@@ -1,0 +1,32 @@
+[
+  {
+    "run_id": "solve-team-fulltrain-multiseed-top2-20260303-134341-seed42-1-top2-convnext_384",
+    "run_dir": "/root/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_confirm/date=2026-03-03/run_id=solve-team-fulltrain-multiseed-top2-20260303-134341-seed42-1-top2-convnext_384",
+    "candidate_name": "",
+    "candidate_hash": "",
+    "backbone_profile": "",
+    "fold_index": "0",
+    "has_val_predictions": true,
+    "has_test_predictions": true
+  },
+  {
+    "run_id": "solve-team-fulltrain-multiseed-top2-20260303-134341-seed52-1-top2-convnext_384",
+    "run_dir": "/root/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_confirm/date=2026-03-03/run_id=solve-team-fulltrain-multiseed-top2-20260303-134341-seed52-1-top2-convnext_384",
+    "candidate_name": "",
+    "candidate_hash": "",
+    "backbone_profile": "",
+    "fold_index": "0",
+    "has_val_predictions": true,
+    "has_test_predictions": true
+  },
+  {
+    "run_id": "solve-team-fulltrain-multiseed-top2-20260303-134341-seed62-1-top2-convnext_384",
+    "run_dir": "/root/ai-22-cv-cv-team1/members/hyjeon1985/outputs/hpc_confirm/date=2026-03-03/run_id=solve-team-fulltrain-multiseed-top2-20260303-134341-seed62-1-top2-convnext_384",
+    "candidate_name": "",
+    "candidate_hash": "",
+    "backbone_profile": "",
+    "fold_index": "0",
+    "has_val_predictions": true,
+    "has_test_predictions": true
+  }
+]

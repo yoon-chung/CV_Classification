@@ -1,0 +1,29 @@
+{
+  "ensemble_method": "soft_vote_weighted",
+  "weight_mode": "val_macro_f1",
+  "weights": {
+    "top2_convnext_384": 0.65,
+    "top2_base": 0.35,
+    "top3_base": 0.15
+  },
+  "models": {
+    "top2_convnext_384": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/archive/date=2026-03-03/solve/solve-team/run_id=solve-team-20260303-101047/runs/run_id=solve-team-20260303-101047-2-top2-convnext_384",
+    "top2_base": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/archive/date=2026-03-03/solve/solve-team/run_id=solve-team-20260303-101047/runs/run_id=solve-team-20260303-101047-1-top2-base",
+    "top3_base": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/archive/date=2026-03-03/solve/solve-team/run_id=solve-team-20260303-101047/runs/run_id=solve-team-20260303-101047-3-top3-base"
+  },
+  "single_key": "top2_convnext_384",
+  "pair_keys": [
+    "top2_convnext_384",
+    "top2_base"
+  ],
+  "triple_keys": [
+    "top2_convnext_384",
+    "top2_base",
+    "top3_base"
+  ],
+  "outputs": {
+    "single": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/archive/date=2026-03-03/solve/solve-team/run_id=solve-team-20260303-101047/final_submissions_selected/submission_1_single_top2_convnext_384.csv",
+    "pair_soft": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/archive/date=2026-03-03/solve/solve-team/run_id=solve-team-20260303-101047/final_submissions_selected/submission_2_pair_soft_top2_convnext_384_top2_base_w6535.csv",
+    "triple_soft": "/home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/archive/date=2026-03-03/solve/solve-team/run_id=solve-team-20260303-101047/final_submissions_selected/submission_3_triple_soft_top2_convnext_384_top2_base_top3_base_w653515.csv"
+  }
+}

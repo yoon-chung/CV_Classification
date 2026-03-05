@@ -1,0 +1,11 @@
+# @package _global_
+dataset:
+  data_root: ${oc.env:DATA_DIR,data}
+  train_csv: ${dataset.data_root}/train.csv
+  test_csv: ${dataset.data_root}/test.csv
+  image_dir_train: ${dataset.data_root}/train
+  image_dir_test: ${dataset.data_root}/test
+  image_extensions: [".jpg", ".png", ".jpeg"]
+
+logging:
+  save_dir: ${oc.env:RUNS_DIR,outputs}

@@ -1,0 +1,18 @@
+# @package _global_
+optimizer:
+  lr: 1e-4
+  weight_decay: 1e-2
+
+augmentation:
+  mix: none
+
+train:
+  label_smoothing: 0.0
+  class_weight_mode: balanced
+
+scheduler:
+  name: cosine
+
+solve:
+  candidate_name: top2
+  candidate_hash: f94e69357e

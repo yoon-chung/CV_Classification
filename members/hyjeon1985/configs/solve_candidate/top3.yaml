@@ -1,0 +1,18 @@
+# @package _global_
+optimizer:
+  lr: 1e-4
+  weight_decay: 5e-3
+
+augmentation:
+  mix: none
+
+train:
+  label_smoothing: 0.0
+  class_weight_mode: balanced
+
+scheduler:
+  name: none
+
+solve:
+  candidate_name: top3
+  candidate_hash: f851b4d859

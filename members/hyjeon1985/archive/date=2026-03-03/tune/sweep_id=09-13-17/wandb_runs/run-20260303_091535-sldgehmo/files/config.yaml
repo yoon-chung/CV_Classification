@@ -1,0 +1,253 @@
+wandb_version: 1
+
+runner:
+  desc: null
+  value:
+    run_id: 09-13-17
+    resume: false
+    dummy_data: false
+    profile: hpc_proxy
+    queue:
+      strategy: fifo
+    max_concurrency: 1
+pipeline:
+  desc: null
+  value:
+    step: full
+    stop_after: eval
+    cache:
+      enabled: false
+      root: /home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/cache
+      namespace: cvdc
+      salt:
+        manual: v1
+        code: ''
+        data: ''
+train:
+  desc: null
+  value:
+    seed: 42
+    epochs: 10
+    batch_size: 24
+    grad_accum_steps: 1
+    amp: true
+    label_smoothing: 0.0
+    class_weight_mode: none
+    early_stop:
+      enabled: true
+      monitor: val/macro_f1
+      mode: max
+      patience: 2
+      min_delta: 0.0005
+      warmup_epochs: 2
+    num_workers: 4
+model:
+  desc: null
+  value:
+    backbone: convnext_small.fb_in22k_ft_in1k
+    pretrained: true
+    num_classes: 17
+optimizer:
+  desc: null
+  value:
+    name: adamw
+    lr: 0.0001
+    weight_decay: 0.005
+scheduler:
+  desc: null
+  value:
+    name: none
+    warmup_epochs: 1
+    min_lr: 1.0e-06
+    step_size: 3
+    gamma: 0.1
+    max_lr: 0.001
+preprocess:
+  desc: null
+  value:
+    target_size: 384
+    padding_pos: center
+augmentation:
+  desc: null
+  value:
+    preset: explore_v1
+    mix: none
+    color_jitter: true
+    random_crop: true
+split:
+  desc: null
+  value:
+    strategy: stratified_kfold
+    n_splits: 5
+    fold_index: 1
+    holdout_ratio: 0.2
+    seed: 42
+    group_key: group_key
+dataset:
+  desc: null
+  value:
+    data_root: /home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/data
+    train_csv: /home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/data/train.csv
+    test_csv: /home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/data/test.csv
+    image_dir_train: /home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/data/train
+    image_dir_test: /home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/data/test
+    image_extensions:
+    - .jpg
+    - .png
+    - .jpeg
+logging:
+  desc: null
+  value:
+    save_dir: /home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/outputs
+wandb:
+  desc: null
+  value:
+    mode: online
+    dir: /home/jhoya/Workspaces/ai-22-cv-cv-team1/members/hyjeon1985/outputs
+    log_interval: epoch
+    log_every_n_steps: 50
+    metrics:
+    - train/loss
+    - val/loss
+    - val/macro_f1
+    - train/lr
+    - train/best_val_macro_f1
+    - train/elapsed_sec
+    - selection/val_macro_f1
+    - selection/val_loss
+    - selection/overfit_gap
+    - selection/score_proxy
+    - tune/val_macro_f1
+    - tune/overfit_gap
+    summary_keys:
+    - tune/val_macro_f1
+    - tune/val_loss
+    - tune/overfit_gap
+    - tune/best_val_macro_f1
+    - tune/early_stopped
+    - tune/train_elapsed_sec
+    project: cv-doc-class
+    entity: upstage-22-cv-team1
+    group: tune__date=2026-03-03__sweep_id=09-13-17
+    artifacts:
+      enabled: false
+    tags:
+    - tune
+    - team_tune
+    - overnight
+    - aggressive
+    - kind:tune
+    - family:date=2026-03-03__sweep_id=09-13-17
+preflight:
+  desc: null
+  value:
+    mode: warn
+    ruleset: confirm
+submission:
+  desc: null
+  value:
+    eval_contracts: []
+upload:
+  desc: null
+  value:
+    s3:
+      enabled: false
+      bucket: cv-team-1
+      prefix: cvdc
+plugins:
+  desc: null
+  value:
+    augment:
+      mode: preset
+      preset_key: explore_v1
+      _target_: ''
+    loss:
+      mode: builtin
+      name: cross_entropy
+      _target_: ''
+    sampler:
+      enabled: false
+      name: ''
+      _target_: ''
+    ensemble:
+      enabled: false
+      name: weighted_mean
+      _target_: ''
+experiment:
+  desc: null
+  value:
+    scenario: cloud
+    description: 'Team tune: overnight search around team_valid full_train winner
+      (m_150b70658d)'
+    kind: tune
+artifacts:
+  desc: null
+  value:
+    level: minimal
+sweep:
+  desc: null
+  value:
+    risk_note: Hydra multirun is lazy-composed. Do not edit code/config during active
+      sweep.
+tune:
+  desc: null
+  value:
+    selection:
+      topk: 8
+    selector:
+      std_weight: 0.3
+      overfit_gap_threshold: 0.02
+      overfit_weight: 1.3
+      fail_weight: 0.8
+    lineage:
+      enabled: true
+spec_version:
+  desc: null
+  value: 1
+lineage:
+  desc: null
+  value:
+    family_id: date=2026-03-03__sweep_id=09-13-17
+    kind: tune
+    job_num: 1
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.19
+    cli_version: 0.17.9
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1772496935
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 49
+      - 50
+      - 53
+      - 55
+      - 63
+      - 80
+      2:
+      - 1
+      - 5
+      - 41
+      - 49
+      - 50
+      - 53
+      - 55
+      - 63
+      - 80
+      3:
+      - 2
+      - 13
+      - 15
+      - 16
+      - 61
+      4: 3.10.19
+      5: 0.17.9
+      8:
+      - 5
+      13: linux-aarch64

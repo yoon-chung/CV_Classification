@@ -1,0 +1,27 @@
+# @package _global_
+defaults:
+  - default
+  - _self_
+
+train:
+  batch_size: 16
+  grad_accum_steps: 2
+  amp: true
+  epochs: 12
+
+preprocess:
+  target_size: 384
+
+augmentation:
+  preset: strong
+  mix: mixup
+
+model:
+  backbone: convnext_small.fb_in22k_ft_in1k
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      optimizer.lr: 3e-4, 6e-4
+      optimizer.weight_decay: 0.02, 0.05

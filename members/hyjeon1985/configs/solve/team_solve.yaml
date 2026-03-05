@@ -1,0 +1,76 @@
+# @package _global_
+defaults:
+  - default
+  - /solve_candidate: top1
+  - /solve_backbone: base
+  - override /scenario: cloud
+  - override /runner_profile: hpc_confirm
+  - _self_
+
+experiment:
+  description: "Team solve: top1-3 candidate x backbone matrix with light TTA"
+
+pipeline:
+  step: full
+  stop_after: submission
+
+upload:
+  s3:
+    enabled: false
+
+train:
+  epochs: 10
+  amp: true
+  num_workers: 4
+  early_stop:
+    enabled: true
+    monitor: val/macro_f1
+    mode: max
+    patience: 2
+    min_delta: 5e-4
+    warmup_epochs: 2
+
+augmentation:
+  preset: explore_v1
+
+scheduler:
+  warmup_epochs: 1
+  min_lr: 1e-6
+
+infer:
+  tta:
+    enabled: true
+    views:
+      - none
+      - rot90
+      - rot180
+      - rot270
+      - hflip
+      - vflip
+      - hflip_rot90
+      - vflip_rot90
+      - hflip_rot180
+      - vflip_rot180
+    cache_enabled: true
+
+metrics:
+  enabled: true
+  export:
+    infer_predictions_with_confidence: true
+    infer_probabilities: true
+
+wandb:
+  mode: online
+  entity: ${oc.env:WANDB_ENTITY,null}
+  project: ${oc.env:WANDB_PROJECT,cv-doc-class}
+  group: ${oc.env:WANDB_GROUP,team_solve__sweep_${solve.sweep_id}__${now:%Y%m%d_%H%M%S}}
+  tags:
+    - solve
+    - team_solve
+    - "sweep:${solve.sweep_id}"
+    - "candidate:${solve.candidate_name}"
+    - "candidate_hash:${solve.candidate_hash}"
+    - "backbone:${solve.backbone_profile}"
+
+solve:
+  sweep_id: 09-13-17

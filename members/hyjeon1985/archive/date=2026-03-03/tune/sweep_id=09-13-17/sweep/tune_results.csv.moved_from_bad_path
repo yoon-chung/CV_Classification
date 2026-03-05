@@ -1,0 +1,1 @@
+trial_dir,candidate_hash,overrides_hash,fold_index,seed,macro_f1,val_loss,best_val_macro_f1,overfit_gap,elapsed_sec,status,checkpoint,last_checkpoint

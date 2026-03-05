@@ -1,0 +1,99 @@
+# @package _global_
+defaults:
+  - default
+  - override /scenario: cloud
+  - override /runner_profile: hpc_proxy
+  - _self_
+
+experiment:
+  description: "Team tune: overnight search around team_valid full_train winner (m_150b70658d)"
+
+pipeline:
+  stop_after: eval
+
+upload:
+  s3:
+    enabled: false
+
+model:
+  backbone: convnext_small.fb_in22k_ft_in1k
+
+preprocess:
+  target_size: 384
+
+train:
+  epochs: 10
+  batch_size: 24
+  grad_accum_steps: 1
+  label_smoothing: 0.1
+  class_weight_mode: none
+  early_stop:
+    enabled: true
+    monitor: val/macro_f1
+    mode: max
+    patience: 2
+    min_delta: 5e-4
+    warmup_epochs: 2
+
+optimizer:
+  lr: 1e-4
+  weight_decay: 1e-2
+
+augmentation:
+  preset: explore_v1
+  mix: none
+
+scheduler:
+  name: none
+  warmup_epochs: 1
+  min_lr: 1e-6
+
+tune:
+  selection:
+    topk: 8
+  selector:
+    std_weight: 0.3
+    overfit_gap_threshold: 0.02
+    overfit_weight: 1.3
+    fail_weight: 0.8
+
+wandb:
+  mode: online
+  entity: ${oc.env:WANDB_ENTITY,null}
+  project: ${oc.env:WANDB_PROJECT,cv-doc-class}
+  group: ${oc.env:WANDB_GROUP,team_tune_${now:%Y%m%d_%H%M%S}}
+  tags: [tune, team_tune, overnight, aggressive]
+  metrics:
+    - train/loss
+    - val/loss
+    - val/macro_f1
+    - train/lr
+    - train/best_val_macro_f1
+    - train/elapsed_sec
+    - selection/val_macro_f1
+    - selection/val_loss
+    - selection/overfit_gap
+    - selection/score_proxy
+    - tune/val_macro_f1
+    - tune/overfit_gap
+  summary_keys:
+    - tune/val_macro_f1
+    - tune/val_loss
+    - tune/overfit_gap
+    - tune/best_val_macro_f1
+    - tune/early_stopped
+    - tune/train_elapsed_sec
+
+hydra:
+  mode: MULTIRUN
+  sweep:
+    subdir: run_id=${hydra.job.num}
+  sweeper:
+    params:
+      optimizer.lr: choice(1e-4,1.3e-4)
+      optimizer.weight_decay: choice(5e-3,1e-2)
+      augmentation.mix: choice(none,mixup)
+      train.label_smoothing: choice(0.0)
+      train.class_weight_mode: choice(none,balanced)
+      scheduler.name: choice(none,cosine)
+      split.fold_index: choice(0,1)

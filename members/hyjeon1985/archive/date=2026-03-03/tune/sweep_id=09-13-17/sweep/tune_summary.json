@@ -1,0 +1,627 @@
+{
+  "schema_version": 1,
+  "family_id": "tune_run",
+  "created_at": "2026-03-03T04:16:00.530196+00:00",
+  "sweep_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17",
+  "objective": {
+    "std_weight": 0.2,
+    "overfit_gap_threshold": 0.03,
+    "overfit_weight": 1.0,
+    "fail_weight": 0.5
+  },
+  "candidates": [
+    {
+      "candidate_hash": "100c8e1d42",
+      "mean_f1": 0.9659117335662133,
+      "std_f1": 0.016000981488538957,
+      "mean_val_loss": 0.12488427222706378,
+      "mean_overfit_gap": 0.0014061520875579547,
+      "mean_elapsed_sec": 231.7040084420005,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9627115372685056,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=55"
+    },
+    {
+      "candidate_hash": "f94e69357e",
+      "mean_f1": 0.948749154025266,
+      "std_f1": 0.003952365148846337,
+      "mean_val_loss": 0.14977021921159966,
+      "mean_overfit_gap": 0.013019735993522907,
+      "mean_elapsed_sec": 233.46551269647898,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9479586809954967,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=23"
+    },
+    {
+      "candidate_hash": "f851b4d859",
+      "mean_f1": 0.9477823708047892,
+      "std_f1": 0.014090243431898686,
+      "mean_val_loss": 0.15900736109220556,
+      "mean_overfit_gap": 0.006353937574454904,
+      "mean_elapsed_sec": 171.6944636629778,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9449643221184095,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=5"
+    },
+    {
+      "candidate_hash": "fa120dfd53",
+      "mean_f1": 0.9464726157440914,
+      "std_f1": 0.007544564177730306,
+      "mean_val_loss": 0.17416219180449843,
+      "mean_overfit_gap": 0.009954920884553464,
+      "mean_elapsed_sec": 162.28060939002899,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9449637029085453,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=1"
+    },
+    {
+      "candidate_hash": "28273742dd",
+      "mean_f1": 0.948845162243825,
+      "std_f1": 0.025932846125514664,
+      "mean_val_loss": 0.15776859170624188,
+      "mean_overfit_gap": 0.014474313058963129,
+      "mean_elapsed_sec": 197.47070550450007,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.943658593018722,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=51"
+    },
+    {
+      "candidate_hash": "9689841d06",
+      "mean_f1": 0.9440452939566042,
+      "std_f1": 0.003580541326306308,
+      "mean_val_loss": 0.14990685846922652,
+      "mean_overfit_gap": 0.01666307162392744,
+      "mean_elapsed_sec": 197.50154354149709,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9433291856913429,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=39"
+    },
+    {
+      "candidate_hash": "bfa5bd0138",
+      "mean_f1": 0.9429194178240281,
+      "std_f1": 0.001751569208863324,
+      "mean_val_loss": 0.1694842694061143,
+      "mean_overfit_gap": 0.014043854089211438,
+      "mean_elapsed_sec": 173.32294402996195,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9425691039822555,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=35"
+    },
+    {
+      "candidate_hash": "48fa1ad486",
+      "mean_f1": 0.9416136485288062,
+      "std_f1": 0.00729904257950148,
+      "mean_val_loss": 0.18625849578529596,
+      "mean_overfit_gap": 6.393067737825442e-05,
+      "mean_elapsed_sec": 173.96898382747895,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9401538400129059,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=3"
+    },
+    {
+      "candidate_hash": "3dd2521972",
+      "mean_f1": 0.9381810112210135,
+      "std_f1": 0.006410949148149991,
+      "mean_val_loss": 0.19473616213404707,
+      "mean_overfit_gap": 0.021337824955630413,
+      "mean_elapsed_sec": 231.40557962600724,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9368988213913835,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=20"
+    },
+    {
+      "candidate_hash": "4e564b08b4",
+      "mean_f1": 0.9370243217528329,
+      "std_f1": 0.002909515213138203,
+      "mean_val_loss": 0.1969362698229296,
+      "mean_overfit_gap": 0.009613788196538742,
+      "mean_elapsed_sec": 114.80118941250839,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9364424187102053,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=33"
+    },
+    {
+      "candidate_hash": "82beb9902f",
+      "mean_f1": 0.9389142026061752,
+      "std_f1": 0.01404909488819528,
+      "mean_val_loss": 0.1641379425169102,
+      "mean_overfit_gap": 0.011446409751211029,
+      "mean_elapsed_sec": 233.30863819201477,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9361043836285361,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=19"
+    },
+    {
+      "candidate_hash": "37c86a68d3",
+      "mean_f1": 0.9365531489854924,
+      "std_f1": 0.0027883868178381066,
+      "mean_val_loss": 0.3301127627491951,
+      "mean_overfit_gap": 0.021573661320488824,
+      "mean_elapsed_sec": 235.8258306045027,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9359954716219248,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=43"
+    },
+    {
+      "candidate_hash": "656c747f66",
+      "mean_f1": 0.9356055696690386,
+      "std_f1": 0.004008124135151558,
+      "mean_val_loss": 0.30427340418100357,
+      "mean_overfit_gap": 0.0111865778224286,
+      "mean_elapsed_sec": 197.86773857101798,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9348039448420083,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=58"
+    },
+    {
+      "candidate_hash": "02699dd590",
+      "mean_f1": 0.9352167778073245,
+      "std_f1": 0.016735171925878256,
+      "mean_val_loss": 0.30334371966975077,
+      "mean_overfit_gap": 0.031217156995377027,
+      "mean_elapsed_sec": 223.28659432698623,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9306525864267717,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=25"
+    },
+    {
+      "candidate_hash": "0f939c8a1f",
+      "mean_f1": 0.9327430514386664,
+      "std_f1": 0.014374340441996591,
+      "mean_val_loss": 0.17435782292990812,
+      "mean_overfit_gap": 0.0196349457810735,
+      "mean_elapsed_sec": 151.54841880651657,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9298681833502671,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=37"
+    },
+    {
+      "candidate_hash": "77c7657dac",
+      "mean_f1": 0.9306781816603684,
+      "std_f1": 0.01035941279101621,
+      "mean_val_loss": 0.18347708056015627,
+      "mean_overfit_gap": 0.02259419845920585,
+      "mean_elapsed_sec": 185.9238790720119,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9286062991021652,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=53"
+    },
+    {
+      "candidate_hash": "72f2055d94",
+      "mean_f1": 0.9302560199953578,
+      "std_f1": 0.011260332160638431,
+      "mean_val_loss": 0.19263280921482615,
+      "mean_overfit_gap": 0.022323402499144773,
+      "mean_elapsed_sec": 150.38597325899173,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9280039535632301,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=17"
+    },
+    {
+      "candidate_hash": "28ed79c341",
+      "mean_f1": 0.9266056400598652,
+      "std_f1": 0.0130249465848557,
+      "mean_val_loss": 0.3308439366519451,
+      "mean_overfit_gap": 0.02873491057667027,
+      "mean_elapsed_sec": 199.22784797701752,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9240006507428941,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=63"
+    },
+    {
+      "candidate_hash": "c74a061094",
+      "mean_f1": 0.931539045707347,
+      "std_f1": 0.009852435849627916,
+      "mean_val_loss": 0.378446849329131,
+      "mean_overfit_gap": 0.03592857119380277,
+      "mean_elapsed_sec": 234.14831095052068,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9236399873436187,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=9"
+    },
+    {
+      "candidate_hash": "d49d1c742c",
+      "mean_f1": 0.9234181812086071,
+      "std_f1": 0.02106454600058333,
+      "mean_val_loss": 0.3570823099996362,
+      "mean_overfit_gap": 0.022090544310879756,
+      "mean_elapsed_sec": 186.03551090549445,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9192052720084904,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=26"
+    },
+    {
+      "candidate_hash": "494f6ff71a",
+      "mean_f1": 0.9267896015669397,
+      "std_f1": 0.010496893452136946,
+      "mean_val_loss": 0.33976895308920313,
+      "mean_overfit_gap": 0.036063029757560205,
+      "mean_elapsed_sec": 210.17463777548983,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.918627193118952,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=47"
+    },
+    {
+      "candidate_hash": "00bce7c231",
+      "mean_f1": 0.9178035775281328,
+      "std_f1": 0.04853852558732774,
+      "mean_val_loss": 0.37179827583687647,
+      "mean_overfit_gap": 0.020453331616658632,
+      "mean_elapsed_sec": 176.27853978500934,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.9080958724106672,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=13"
+    },
+    {
+      "candidate_hash": "a7e0ca194d",
+      "mean_f1": 0.9101021165999368,
+      "std_f1": 0.010742577403765219,
+      "mean_val_loss": 0.23256970177005443,
+      "mean_overfit_gap": 0.03498530984576376,
+      "mean_elapsed_sec": 162.2093385720218,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.90296829127342,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=7"
+    },
+    {
+      "candidate_hash": "a87fbad399",
+      "mean_f1": 0.9028993801992227,
+      "std_f1": 0.0014627926219945575,
+      "mean_val_loss": 0.40602053222911694,
+      "mean_overfit_gap": 0.038056834851032006,
+      "mean_elapsed_sec": 184.96690012700856,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.8945499868237917,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=10"
+    },
+    {
+      "candidate_hash": "5d90d19a5b",
+      "mean_f1": 0.9104346726644212,
+      "std_f1": 0.008552206391738204,
+      "mean_val_loss": 0.27570575342646664,
+      "mean_overfit_gap": 0.04570738463043311,
+      "mean_elapsed_sec": 172.4637989604962,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.8930168467556405,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=48"
+    },
+    {
+      "candidate_hash": "1e31142e6d",
+      "mean_f1": 0.9067648963150166,
+      "std_f1": 0.03711748465488224,
+      "mean_val_loss": 0.3850278396691595,
+      "mean_overfit_gap": 0.04914015902750779,
+      "mean_elapsed_sec": 210.82546451149392,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.8802012403565324,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=28"
+    },
+    {
+      "candidate_hash": "3ea3805fde",
+      "mean_f1": 0.9066673525612361,
+      "std_f1": 0.03901298353135252,
+      "mean_val_loss": 0.4047777179096427,
+      "mean_overfit_gap": 0.06079814280015072,
+      "mean_elapsed_sec": 209.67345416752505,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.8680666130548149,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=44"
+    },
+    {
+      "candidate_hash": "9de711d13b",
+      "mean_f1": 0.9018057306921767,
+      "std_f1": 0.03472129280496472,
+      "mean_val_loss": 0.4457286644194808,
+      "mean_overfit_gap": 0.05831170392353141,
+      "mean_elapsed_sec": 210.4968933330092,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.8665497682076524,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=15"
+    },
+    {
+      "candidate_hash": "281676ce9e",
+      "mean_f1": 0.9001518236216802,
+      "std_f1": 0.02444273122741103,
+      "mean_val_loss": 0.43077484677944866,
+      "mean_overfit_gap": 0.06856847830768192,
+      "mean_elapsed_sec": 235.80423216201598,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.8566947990685161,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=57"
+    },
+    {
+      "candidate_hash": "389592b2bf",
+      "mean_f1": 0.8880871772361897,
+      "std_f1": 0.042629495087242786,
+      "mean_val_loss": 0.5248201638460159,
+      "mean_overfit_gap": 0.06886003662870133,
+      "mean_elapsed_sec": 198.29235101648374,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.8407012415900398,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=31"
+    },
+    {
+      "candidate_hash": "0ba21db0be",
+      "mean_f1": 0.866179558094555,
+      "std_f1": 0.0004112733000601332,
+      "mean_val_loss": 0.46328332115496906,
+      "mean_overfit_gap": 0.08827208229968991,
+      "mean_elapsed_sec": 211.06717066600686,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.8078252211348531,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=41"
+    },
+    {
+      "candidate_hash": "3d544fbccb",
+      "mean_f1": 0.8753829691696131,
+      "std_f1": 0.04219342604437565,
+      "mean_val_loss": 0.5191079596323627,
+      "mean_overfit_gap": 0.09260555690488875,
+      "mean_elapsed_sec": 209.47952652649838,
+      "n_total": 2,
+      "n_success": 2,
+      "n_fail": 0,
+      "fail_rate": 0.0,
+      "score": 0.8043387270558492,
+      "folds": [
+        0,
+        1
+      ],
+      "seeds": [],
+      "best_trial_dir": "members/hyjeon1985/outputs/hpc_proxy/date=2026-03-03/sweep_id=09-13-17/run_id=60"
+    }
+  ],
+  "topk": [
+    "100c8e1d42",
+    "f94e69357e",
+    "f851b4d859"
+  ]
+}

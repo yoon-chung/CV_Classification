@@ -1,0 +1,17 @@
+models:
+  - name: convnext_small.in12k_ft_in1k_384
+    pretrained: true
+    image_size: 384
+    batch_size: 24
+  - name: tf_efficientnetv2_s.in1k
+    pretrained: true
+    image_size: 384
+    batch_size: 32
+  - name: swin_tiny_patch4_window7_224.ms_in1k
+    pretrained: true
+    image_size: 224
+    batch_size: 56
+
+ensemble:
+  type: weighted_soft_voting
+  weights: [0.34, 0.33, 0.33]

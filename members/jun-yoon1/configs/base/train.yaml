@@ -1,0 +1,21 @@
+seed: 42
+epochs: 18
+amp: true
+optimizer: adamw
+lr: 0.0001
+weight_decay: 0.01
+scheduler: cosine
+
+loss:
+  name: cross_entropy
+  label_smoothing: 0.05
+  class_weight: balanced
+
+augmentation:
+  use_mixup: false
+  use_cutmix: false
+  class_aware_policy: true
+  strong_for_low_f1_class: true
+  strong_bottom_k: 3
+  strong_profile: v2
+  weak_classes: [3, 7, 14]

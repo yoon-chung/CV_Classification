@@ -1,0 +1,18 @@
+# @package _global_
+model:
+  backbone: tf_efficientnetv2_s
+  pretrained: true
+  num_classes: 17
+  in_chans: 3
+
+augmentation:
+  train:
+    resize: 384
+    random_crop: true
+    color_jitter: true
+    horizontal_flip: false
+    mixup: 0.0
+    cutmix: 0.0
+  val:
+    resize: 384
+    center_crop: true

@@ -1,0 +1,7 @@
+backbone_a,backbone_b,candidate_hash_a,candidate_hash_b,candidate_name_a,candidate_name_b,disagreement_rate,fold_index_a,fold_index_b,id_signature,n_common,run_a,run_b
+,,,,,,0.32229299363057323,,,9b81ac0fe6ba,3140,solve-team-20260303-101047-3-top3-base,solve-team-20260303-101047-4-top3-convnext_384
+,,,,,,0.3060509554140127,,,9b81ac0fe6ba,3140,solve-team-20260303-101047-1-top2-base,solve-team-20260303-101047-4-top3-convnext_384
+,,,,,,0.27420382165605095,,,9b81ac0fe6ba,3140,solve-team-20260303-101047-2-top2-convnext_384,solve-team-20260303-101047-4-top3-convnext_384
+,,,,,,0.2710191082802548,,,9b81ac0fe6ba,3140,solve-team-20260303-101047-2-top2-convnext_384,solve-team-20260303-101047-3-top3-base
+,,,,,,0.24936305732484076,,,9b81ac0fe6ba,3140,solve-team-20260303-101047-1-top2-base,solve-team-20260303-101047-3-top3-base
+,,,,,,0.20828025477707007,,,9b81ac0fe6ba,3140,solve-team-20260303-101047-1-top2-base,solve-team-20260303-101047-2-top2-convnext_384

@@ -1,0 +1,9 @@
+{
+  "node": "eval",
+  "status": "completed",
+  "macro_f1": 0.9245945548490913,
+  "val/macro_f1": 0.9245945548490913,
+  "val/loss": 0.38348203152418137,
+  "selection/overfit_gap": 0.0543646335792507,
+  "n_val": 314
+}
